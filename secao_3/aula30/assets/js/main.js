@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
     const data = new Date()
     const diaSemana = data.getDay()
     const dia = zeroAEsquerda(data.getDate())
@@ -6,19 +6,19 @@ document.addEventListener('DOMContentLoaded', function(){
     const ano = data.getFullYear()
     const hora = zeroAEsquerda(data.getHours())
     const minuto = zeroAEsquerda(data.getMinutes())// 0 a 6
-    
+
     const localHora = document.getElementById('h1')
     const diaSemanaTexto = getWeekDay(diaSemana)
     const mesTexto = getMes(mes)
     localHora.innerHTML = `${diaSemanaTexto}, ${dia} de ${mesTexto} de ${ano} ${hora}:${minuto}`
 
-    function zeroAEsquerda(num){
+    function zeroAEsquerda(num) {
         return num >= 10 ? num : `0${num}`
     }
 
-    function getWeekDay(diaSemana){
+    function getWeekDay(diaSemana) {
         let diaSemanaTexto;
-        switch(diaSemana){
+        switch (diaSemana) {
             case 0:
                 diaSemanaTexto = 'Domingo'
                 break
@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         return diaSemanaTexto
     }
-    function getMes(mes){
+    function getMes(mes) {
         let mesTexto
-        switch(mes){
+        switch (mes) {
             case 0:
                 mesTexto = 'Janeiro'
                 break
@@ -92,3 +92,8 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
 })
+
+// const h1 = document.querySelector('.container h1')
+// const data = new Date()
+
+// h1.innerHTML = data.toLocaleString('pt-BR', {dateStyle: 'full', timeStyle: 'short'})
