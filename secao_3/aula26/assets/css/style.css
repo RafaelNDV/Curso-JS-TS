@@ -72,3 +72,13 @@ form button:hover {
 fomr button:active {
     background-color: rgb(0, 0, 0);
 }
+#resultado{
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+}
+
+#resultado > p{
+    padding: 10px;
+    font-weight: bold;
+}
