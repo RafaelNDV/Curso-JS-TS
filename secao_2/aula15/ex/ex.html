@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios de números</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const numero = Number(prompt('Digite um número: '))
+        document.body.innerHTML += `<h1> Seu número é ${numero} </h1>`
+        document.body.innerHTML += `<p> Raiz quadrada: ${numero ** (1/2)} </p>`
+        document.body.innerHTML += `<p>${numero} é inteiro? ${Number.isInteger(numero)}</p>`
+        document.body.innerHTML += `<p>${numero} é NaN? ${Number.isNaN(numero)}</p>`
+        document.body.innerHTML += `<p>Arredondando para baixo: ${Math.floor(numero)}</p>`
+        document.body.innerHTML += `<p>Arredondando para cima: ${Math.ceil(numero)}</p>`
+        document.body.innerHTML += `<p>Com duas casas decimais: ${numero.toFixed(2)} </p>` 
+    </script>
+</body>
+</html>
