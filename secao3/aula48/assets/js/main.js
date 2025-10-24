@@ -26,6 +26,7 @@ function adicionarLista(tarefa){
     linha.appendChild(botao)
 
     i++
+
 }
 
 function apagarTarefa(){
@@ -33,8 +34,9 @@ function apagarTarefa(){
 }
 
 enviar.addEventListener('click', function(e){
-    let tarefa = document.querySelector('.tarefa').value
-    adicionarLista(tarefa)
+    let tarefa = document.querySelector('.tarefa')
+    adicionarLista(tarefa.value)
+    tarefa.value = ''
 })
 
 document.addEventListener('click', function(e){
