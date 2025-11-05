@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.get('/testes/:idUsuarios?', (req, res) => {
     console.log(req.params.idUsuarios)
-    res.send('Oi')
+    res.send(req.params)
 })
 
 app.post('/', (req, res) => {
