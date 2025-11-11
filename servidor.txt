@@ -1,0 +1,3 @@
+177.37.138.67
+
+mongodb+srv://RafaelNDV:<db_password>@cursojs1.a7xqs8g.mongodb.net/?appName=cursojs1
