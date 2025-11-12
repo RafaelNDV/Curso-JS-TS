@@ -23,6 +23,7 @@ const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/midd
 app.use(helmet())
 
 app.use(express.urlencoded({extended:  true}))
+app.use(express.json())
 
 app.use(express.static('./public'))
 
