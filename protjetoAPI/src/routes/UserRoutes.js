@@ -5,7 +5,7 @@ import loginRequired from '../middlewares/loginRequired.js'
 
 const router = new Router()
 
-// router.get('/', userController.index)
+router.get('/', userController.index)
 // router.get('/:id', userController.show)
 
 
