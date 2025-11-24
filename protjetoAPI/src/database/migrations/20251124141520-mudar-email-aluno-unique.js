@@ -1,12 +1,18 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-     return await queryInterface.changeColumn('alunos', 'email', {
-      id: Sequelize.STRING,
+  async up(queryInterface, Sequelize) {
+    return queryInterface.changeColumn('alunos', 'email', {
+      type: Sequelize.STRING,
       allowNull: false,
       unique: true,
     });
   },
 
-  async down () {}
+  async down(queryInterface, Sequelize) {
+    return queryInterface.changeColumn('alunos', 'email', {
+      type: Sequelize.STRING,
+      allowNull: true,
+      unique: false,
+    });
+  }
 };
